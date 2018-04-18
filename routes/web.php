@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('webpage');
 });
+
+
+/**
+ * show the main admin page
+ */
+Route::get('/admin',function(){
+    return view('layout_admin.master_admin');
+});
+
