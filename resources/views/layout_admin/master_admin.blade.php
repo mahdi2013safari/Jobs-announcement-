@@ -6,11 +6,7 @@
 <div class="content mt-3">
     <div class="animated fadeIn">
         <div class="row">
-
-
-            <h1>Content admin page </h1>
-
-
+            @yield('content');
         </div><!-- .row -->
     </div><!-- .animated -->
 </div><!-- .content -->
