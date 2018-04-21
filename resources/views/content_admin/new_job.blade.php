@@ -1,4 +1,6 @@
 @extends('layout_admin.master')
 @section('content')
-    <h1>mahdi safari</h1>
+
+    <h1>New Jobs Pages</h1>
+
     @endsection
