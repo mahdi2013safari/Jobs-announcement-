@@ -20,6 +20,10 @@ Route::get('/', function () {
  * show the main admin page
  */
 Route::get('/admin',function(){
-    return view('layout_admin.master_admin');
+    return view('layout_admin.master');
+});
+
+Route::get('/admin/new_job', function(){
+   return view('content_admin.new_job');
 });
 
