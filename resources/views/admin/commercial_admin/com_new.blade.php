@@ -1,0 +1,1 @@
+// this is your blade template file view

@@ -25,7 +25,7 @@
                 <li>
                     <a href="index-2.html"><i class="fa fa-th-large"></i> <span class="nav-label">Jobs</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="index-2.html">New</a></li>
+                        <li><a href="{{ url('admin/new_job') }}">New</a></li>
                         <li><a href="dashboard_2.html">Delete</a></li>
                         <li><a href="dashboard_3.html">Edit</a></li>
                     </ul>
