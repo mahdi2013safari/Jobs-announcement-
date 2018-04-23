@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\MahdiController;
+
 Route::get('/', function () {
     return view('webpage');
 });
@@ -23,7 +25,7 @@ Route::get('/admin',function(){
     return view('admin.layout_admin.master');
 });
 
-Route::get('/admin/new_job', function(){
-   return view('admin.content_admin.new_job');
-});
+//Route::resource('/admin/new', MahdiController);
+
+Route::resource('/admin/safari','SafariController');
 
