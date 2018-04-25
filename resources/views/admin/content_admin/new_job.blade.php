@@ -1,10 +1,17 @@
 @extends('admin.layout_admin.master')
 @section('content')
 
-    <div class="col-lg-12">
+    <!--$table->string('name');
+            $table->string('company');
+            $table->string('num_emp');
+            $table->string('summary');
+            $table->string('date_start');
+            $table->string('date_expire');
+            $table->string('email'); -->
+<div class="col-lg-12" xmlns="http://www.w3.org/1999/html">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>All form elements <small>With custom checbox and radion elements.</small></h5>
+                <h5>Job announcement <small>Enter new job.</small></h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -25,21 +32,30 @@
 
             </div>
             <div class="ibox-content">
-                <form method="post" class="form-horizontal" action="">
-                    <div class="form-group"><label class="col-sm-2 control-label">Name</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control"></div>
+                <form method="post" class="form-horizontal" action="/admin">
+                    <div class="form-group"><label class="col-sm-2 control-label">name Job</label>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="name"></div>
                     </div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Last Name</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" ></div>
+                    <div class="form-group"><label class="col-sm-2 control-label">Company name</label>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="company"></div>
                     </div>
-                    <div class="form-group"><label class="col-sm-2 control-label">father name</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" ></div>
+                    <div class="form-group"><label class="col-sm-2 control-label">Number of employees</label>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="num_emp"></div>
                     </div>
-                    <div class="form-group"><label class="col-sm-2 control-label">age</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" ></div>
+                    <div class="form-group"><label class="col-sm-2 control-label">summary of job</label>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="summary"></div>
+                    </div>
+                    <div class="form-group"><label class="col-sm-2 control-label">data start</label>
+                        <div class="col-sm-10"><input type="date" placeholder="" class="form-control" name="date_start"></div>
+                    </div>
+                    <div class="form-group"><label class="col-sm-2 control-label">data expire</label>
+                        <div class="col-sm-10"><input type="date" placeholder="" class="form-control" name="date_expire"></div>
+                    </div>
+                    <div class="form-group"><label class="col-sm-2 control-label">Email applay</label>
+                        <div class="col-sm-10"><input type="email" placeholder="" class="form-control" name="email"></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label"></label>
-                        <div class="col-sm-10"><button type="text" placeholder="" class="btn btn-w-m btn-primary" >Submit</button></div>
+                        <div class="col-sm-10"><button type="submit" placeholder="" class="btn btn-primary">submite</button></div>
                     </div>
                 </form>
             </div>

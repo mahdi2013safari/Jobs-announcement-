@@ -18,14 +18,20 @@ Route::get('/', function () {
 });
 
 
-/**
- * show the main admin page
- */
-Route::get('/admin',function(){
-    return view('admin.layout_admin.master');
-});
 
 //Route::resource('/admin/new', MahdiController);
-
+/**
+ * this route for testing and debagging of migration
+ */
 Route::resource('/admin/safari','SafariController');
+
+/**
+ * route open the view page of admin/ enter new job .
+ */
+Route::resource('/admin','JobAnnounceController');
+
+
+Route::get('/display-data',function(){
+    return view ('admin.content_admin.display_jobs');
+});
 
