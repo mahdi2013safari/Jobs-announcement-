@@ -28,6 +28,7 @@
                         <li><a href="{{ url('admin/create') }}">New</a></li>
                         <li><a href="#">Delete</a></li>
                         <li><a href="#">Edit</a></li>
+                        <li><a href="/display-data">display data</a></li>
                     </ul>
                 </li>
 
