@@ -31,7 +31,5 @@ Route::resource('/admin/safari','SafariController');
 Route::resource('/admin','JobAnnounceController');
 
 
-Route::get('/display-data',function(){
-    return view ('admin.content_admin.display_jobs');
-});
+//Route::get('/admin/display-data', 'JobAnnounceController@index');
 

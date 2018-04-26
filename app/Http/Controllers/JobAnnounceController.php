@@ -9,13 +9,15 @@ class JobAnnounceController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+*
+* @return \Illuminate\Http\Response
+*/
     public function index()
     {
         $jobs = job_announce::all();
-        return view('admin.layout_admin.master',compact('jobs')); 
+
+        //return $jobs;
+        return view('admin.content_admin.display_jobs',compact('jobs'));
     }
 
     /**

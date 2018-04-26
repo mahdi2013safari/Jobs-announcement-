@@ -24,9 +24,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="ibox-content">
 
+                <div class="ibox-content">
                     <div class="table-responsive">
+
                         <table class="table table-striped table-bordered table-hover dataTables-example" >
                             <thead>
                             <tr>
@@ -37,13 +38,14 @@
                                 <th>date start</th>
                                 <th>date expire</th>
                                 <th>Email</th>
-                                <th>date at</th>
+                                <th>Edit record</th>
+                                <th>Delete record</th>
 
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($jobs as $job)
-                            <tr class="gradeX">
+                            <tr>
                                 <td>{{ $job->name }}</td>
                                 <td>{{ $job->company }}</td>
                                 <td>{{ $job->num_emp }}</td>
@@ -51,18 +53,23 @@
                                 <td>{{ $job->date_start }}</td>
                                 <td>{{ $job->date_expire }}</td>
                                 <td>{{ $job->email }}</td>
-                                <td>{{ $job->created_at }}</td>
-                                <td>{{ $job->updated_at }}</td>
+                                <th><a href="" class="fa fa-edit">   Edit</a></th>
+                                <th><a href="" class="fa fa-remove" style="color: red">   Delete</a></th>
                             </tr>
                             @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                                <th>Name JOB</th>
+                                <th>Company</th>
+                                <th>Number of employee</th>
+                                <th>summary</th>
+                                <th>date start</th>
+                                <th>date expire</th>
+                                <th>Email</th>
+                                <th>Edit record</th>
+                                <th>Delete record</th>
+
                             </tr>
                             </tfoot>
                         </table>
