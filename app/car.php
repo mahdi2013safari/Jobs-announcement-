@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class job_announce extends Model
+class car extends Model
 {
-
-    protected $table = 'job_announces';
+    protected $table = 'cars';
     protected $guarded = [];
+    
 }
-

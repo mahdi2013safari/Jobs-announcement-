@@ -20,7 +20,7 @@
 <!-- Custom and plugin javascript -->
 <script src="/style_admin/js/inspinia.js"></script>
 <script src="/style_admin/js/plugins/pace/pace.min.js"></script>
-
+@yield('java-script')
 
 </body>
 

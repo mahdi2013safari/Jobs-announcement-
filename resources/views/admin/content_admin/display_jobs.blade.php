@@ -53,8 +53,9 @@
                                 <td>{{ $job->date_start }}</td>
                                 <td>{{ $job->date_expire }}</td>
                                 <td>{{ $job->email }}</td>
-                                <th><a href="" class="fa fa-edit">   Edit</a></th>
-                                <th><a href="" class="fa fa-remove" style="color: red">   Delete</a></th>
+                                <th><a href="/admin/{{ $job->id }}/edit" class="fa fa-edit">   Edit</a></th>
+                                <th><a href="" data-toggle="modal" data-target="#DeleteModal" onclick="clickDelete({{ $job->id }})" class="fa fa-trash"  style="color: red">   Delete</a></th>
+                                {{--"--}}
                             </tr>
                             @endforeach
                             </tbody>
@@ -80,5 +81,38 @@
         </div>
     </div>
 
+
+    <!-- modal window show delete confirm -->
+    <div class="modal inmodal" id="DeleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated bounceInRight">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <i class="fa fa-trash modal-icon"></i>
+                    <h4 class="modal-title">Are you sure?</h4>
+                    <small class="font-bold">This deletion may deleted on database without any backup!<br>Make sure take backup first and then delete it.</small>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-danger" id="deleteRoute" href="">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @endsection
+
+@section('java-script')
+
+    <script>
+
+                function clickDelete(id) {
+                    $('#deleteRoute').attr('href','admin/'+id+'/delete');
+                }
+
+    </script>
 
     @endsection

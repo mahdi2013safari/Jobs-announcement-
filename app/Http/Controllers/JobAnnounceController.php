@@ -15,8 +15,6 @@ class JobAnnounceController extends Controller
     public function index()
     {
         $jobs = job_announce::all();
-
-        //return $jobs;
         return view('admin.content_admin.display_jobs',compact('jobs'));
     }
 
@@ -51,7 +49,7 @@ class JobAnnounceController extends Controller
      */
     public function show(job_announce $job_announce)
     {
-        //
+        
     }
 
     public function display_table()
@@ -62,12 +60,12 @@ class JobAnnounceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\job_announce  $job_announce
      * @return \Illuminate\Http\Response
      */
-    public function edit(job_announce $job_announce)
+    public function edit($id)
     {
-        //
+        $job = job_announce::find($id);
+        return view('admin.content_admin.edit_job',compact('job'));
     }
 
     /**
@@ -77,19 +75,31 @@ class JobAnnounceController extends Controller
      * @param  \App\job_announce  $job_announce
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, job_announce $job_announce)
+    public function update(Request $request,$id)
     {
-        //
+        $job = job_announce::find($id);
+        $job->name = $request->name;
+        $job->company = $request->company;
+        $job->num_emp = $request->num_emp;
+        $job->summary = $request->summary;
+        $job->date_start = $request->date_start;
+        $job->date_expire = $request->date_expire;
+        $job->email = $request->email;
+        $job->save();
+        return redirect('/admin');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\job_announce  $job_announce
+     * @param $id
      * @return \Illuminate\Http\Response
+     * @internal param job_announce $job_announce
      */
-    public function destroy(job_announce $job_announce)
+    public function destroy($id)
     {
-        //
+        $job = job_announce::find($id);
+        $job->delete();
+        return redirect()->back();
     }
 }

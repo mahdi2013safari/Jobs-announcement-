@@ -29,7 +29,12 @@ Route::resource('/admin/safari','SafariController');
  * route open the view page of admin/ enter new job .
  */
 Route::resource('/admin','JobAnnounceController');
-
+Route::get('/admin/{id}/delete','JobAnnounceController@destroy');
+Route::resource('/car','CarController');
 
 //Route::get('/admin/display-data', 'JobAnnounceController@index');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
