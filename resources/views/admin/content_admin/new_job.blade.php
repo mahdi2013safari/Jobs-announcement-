@@ -34,25 +34,25 @@
             <div class="ibox-content">
                 <form method="post" class="form-horizontal" action="/admin">
                     <div class="form-group"><label class="col-sm-2 control-label">name Job</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="name"></div>
+                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="name" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label">Company name</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="company"></div>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="company" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label">Number of employees</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="num_emp"></div>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="num_emp" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label">summary of job</label>
-                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="summary"></div>
+                        <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="summary" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label">data start</label>
-                        <div class="col-sm-10"><input type="date" placeholder="" class="form-control" name="date_start"></div>
+                        <div class="col-sm-10"><input type="date" placeholder="" class="form-control" name="date_start" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label">data expire</label>
-                        <div class="col-sm-10"><input type="date" placeholder="" class="form-control" name="date_expire"></div>
+                        <div class="col-sm-10"><input type="date" placeholder="" class="form-control" name="date_expire" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label">Email applay</label>
-                        <div class="col-sm-10"><input type="email" placeholder="" class="form-control" name="email"></div>
+                        <div class="col-sm-10"><input type="email" placeholder="" class="form-control" name="email" required></div>
                     </div>
                     <div class="form-group"><label class="col-sm-2 control-label"></label>
                         <div class="col-sm-10"><button type="submit" placeholder="" class="btn btn-primary">submite</button></div>

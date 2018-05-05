@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\job_announce;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class JobAnnounceController extends Controller
 {
@@ -34,8 +36,22 @@ class JobAnnounceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
+//        dd($request->all());
+        $validate = Validator::make($request->all(),[
+            'name'=>'required',
+            'company'=>'required',
+            'num_emp'=>'required',
+            'summary'=>'required',
+            'date_start'=>'required',
+            'date_expire'=>'required',
+            'email'=>'required'
+        ]);
+        if($validate->fails()){
+            return redirect('/admin/create')->withError($validate)->withInput();
+        }
         $job = job_announce::create($request->all());
         $job->save();
         return redirect('/admin');
@@ -71,9 +87,10 @@ class JobAnnounceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\job_announce  $job_announce
+     * @param  \Illuminate\Http\Request $request
+     * @param $id
      * @return \Illuminate\Http\Response
+     * @internal param job_announce $job_announce
      */
     public function update(Request $request,$id)
     {

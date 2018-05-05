@@ -15,7 +15,8 @@
                             <li><a href="contacts.html">Contacts</a></li>
                             <li><a href="mailbox.html">Mailbox</a></li>
                             <li class="divider"></li>
-                            <li><a href="login.html">Logout</a></li>
+                            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" >Logout</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
@@ -201,7 +202,7 @@
 
 
                     <li>
-                        <a href="login.html">
+                        <a  href="{{ route('logout') }}">
                             <i class="fa fa-sign-out"></i> Log out
                         </a>
                     </li>
