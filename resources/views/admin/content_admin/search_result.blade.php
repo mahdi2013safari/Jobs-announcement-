@@ -26,12 +26,9 @@
                 </div>
 
                 <div class="ibox-content">
-                    <div class="input-group m-b">
-                        <span class="input-group-btn">
-                            <a type="button" href="" class="btn btn-primary" id="btnSearch" onclick="clickSearch()">Go!</a>
-                        </span> <input type="text" class="form-control" value="" id="search_job" placeholder="Enter Name JOB">
-                    </div>
+                   <a class="btn btn-rounded btn-primary fa fa-backward" href="{{ URL::previous() }}">   Back page</a>
                     <div class="table-responsive">
+
                         <table class="table table-striped table-bordered table-hover dataTables-example" >
                             <thead>
                             <tr>
@@ -45,28 +42,25 @@
                                 <th>Email</th>
                                 <th>Edit record</th>
                                 <th>Delete record</th>
-
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($jobs as $job)
-                            <tr>
-                                <td>{{ $job->id }}</td>
-                                <td>{{ $job->name }}</td>
-                                <td>{{ $job->company }}</td>
-                                <td>{{ $job->num_emp }}</td>
-                                <td>{{ $job->summary }}</td>
-                                <td>{{ $job->date_start }}</td>
-                                <td>{{ $job->date_expire }}</td>
-                                <td>{{ $job->email }}</td>
-                                <th><a href="/admin/{{ $job->id }}/edit" class="fa fa-edit">   Edit</a></th>
-                                <th><a href="" data-toggle="modal" data-target="#DeleteModal" onclick="clickDelete({{ $job->id }})" class="fa fa-trash"  style="color: red">   Delete</a></th>
-                                {{--"--}}
-                            </tr>
-                            @endforeach
+                                <tr>
+                                    <td>{{ $jobs->id }}</td>
+                                    <td>{{ $jobs->name }}</td>
+                                    <td>{{ $jobs->company }}</td>
+                                    <td>{{ $jobs->num_emp }}</td>
+                                    <td>{{ $jobs->summary }}</td>
+                                    <td>{{ $jobs->date_start }}</td>
+                                    <td>{{ $jobs->date_expire }}</td>
+                                    <td>{{ $jobs->email }}</td>
+                                    <th><a href="/admin/{{ $jobs->id }}/edit" class="fa fa-edit">   Edit</a></th>
+                                    <th><a href="" data-toggle="modal" data-target="#DeleteModal" onclick="clickDelete({{ $jobs->id }})" class="fa fa-trash"  style="color: red">   Delete</a></th>
+                                </tr>
                             </tbody>
                             <tfoot>
                             <tr>
+
                                 <th>ID</th>
                                 <th>Name JOB</th>
                                 <th>Company</th>
@@ -77,7 +71,6 @@
                                 <th>Email</th>
                                 <th>Edit record</th>
                                 <th>Delete record</th>
-
                             </tr>
                             </tfoot>
                         </table>
@@ -108,17 +101,12 @@
             </div>
         </div>
     </div>
-
-    @endsection
+@endsection
 
 @section('java-script')
     <script>
         function clickDelete(id) {
             $('#deleteRoute').attr('href','admin/'+id+'/delete');
         }
-        function clickSearch() {
-            var $x = $('#search_job').val();
-            $('#btnSearch').attr('href','admin/'+$x);
-        }
     </script>
-    @endsection
+@endsection

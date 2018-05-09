@@ -10,6 +10,7 @@
         <h3>Register to JobBook</h3>
         <p>Create account to see it in action.</p>
         <form class="m-t" role="form" method="POST" action="{{ route('register') }}">
+            @csrf
             <div class="form-group">
                 <input type="text" class="form-control" name="name" placeholder="Name" required="" value="{{old('name')}}">
             </div>
@@ -23,7 +24,6 @@
                 <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
-
             <p class="text-muted text-center"><small>Already have an account?</small></p>
             <a class="btn btn-sm btn-white btn-block" href="{{ route('login') }}">Login</a>
         </form>

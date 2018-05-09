@@ -60,13 +60,17 @@ class JobAnnounceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\job_announce  $job_announce
+     * @param $name
      * @return \Illuminate\Http\Response
+     * @internal param $id
+     * @internal param job_announce $job_announce
      */
-    public function show(job_announce $job_announce)
+    public function show($name)
     {
-        
+        $jobs = job_announce::where('name','like','%'.$name.'%')->first();
+        return view('admin.content_admin.search_result',compact('jobs'));
     }
+
 
     public function display_table()
     {

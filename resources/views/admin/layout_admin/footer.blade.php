@@ -20,10 +20,10 @@
 <!-- Custom and plugin javascript -->
 <script src="/style_admin/js/inspinia.js"></script>
 <script src="/style_admin/js/plugins/pace/pace.min.js"></script>
+<script src="/style_admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="/style_admin/js/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="/style_admin/js/plugins/summernote/summernote.min.js"></script>
 @yield('java-script')
-<main class="py-4">
-    @yield('content')
-</main>
 </body>
 
 

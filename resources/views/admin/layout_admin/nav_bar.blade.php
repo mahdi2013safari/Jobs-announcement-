@@ -27,9 +27,7 @@
                     <a href="index-2.html"><i class="fa fa-th-large"></i> <span class="nav-label">Jobs</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="{{ url('admin/create') }}">New</a></li>
-                        <li><a href="#">Delete</a></li>
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="/display-data">display data</a></li>
+                        <li><a href="/admin">display data</a></li>
                     </ul>
                 </li>
 
