@@ -28,7 +28,7 @@
                 <div class="ibox-content">
                     <div class="input-group m-b">
                         <span class="input-group-btn">
-                            <a type="button" href="" class="btn btn-primary" id="btnSearch" onclick="clickSearch()">Go!</a>
+                            <a type="button" href="" class="btn btn-primary" id="btnSearch" onclick="clickSearch()">Search</a>
                         </span> <input type="text" class="form-control" value="" id="search_job" placeholder="Enter Name JOB">
                     </div>
                     <div class="table-responsive">

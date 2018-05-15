@@ -13,9 +13,7 @@
 
 use App\Http\Controllers\MahdiController;
 
-Route::get('/', function () {
-    return view('webpage');
-});
+Route::get('/', 'LandingPage@index');
 
 
 Route::middleware('auth')->group(function(){
