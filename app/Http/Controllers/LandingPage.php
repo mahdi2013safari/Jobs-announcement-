@@ -42,12 +42,18 @@ class LandingPage extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param $name
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
-    public function show($id)
+    public function show($name)
     {
-        //
+        //$jobs = job_announce::where('name','like','%'.$name.'%')->first();
+        $jobs = job_announce::find($name);
+        //dd($jobs);
+        return view('land_page.search_result_page',compact('jobs'));
+        //dd($jobs);
+        //return view('land_page.webpage',compact('job'));
     }
 
     /**

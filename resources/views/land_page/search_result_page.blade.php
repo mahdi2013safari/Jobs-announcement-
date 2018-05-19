@@ -2,12 +2,9 @@
 
 @section('content_page')
     {{-- your content goes here --}}
-    <div class="input-group m-b">
-        <span class="input-group-btn">
-            <a type="button" href="" class="btn btn-primary" id="btnSearch" onclick="clickSearch()">Search</a>
-        </span>
-        <input type="text" class="form-control" value="" id="filter" placeholder="Enter Name JOB">
-    </div>
+
+
+
 
     <br/>
     <br/>
@@ -24,15 +21,15 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($jobs as $job)
+
                 <tr>
-                    <td>{{ $job->id }}</td>
-                    <td><a href="#">{{ $job->name }}</a></td>
-                    <td><a href="#">{{ $job->company }}</a></td>
-                    <td>{{ $job->num_emp }}</td>
-                    <td>{{ $job->summary }}</td>
+                    <td>{{ $jobs->id }}</td>
+                    <td><a href="#">{{ $jobs->name }}</a></td>
+                    <td><a href="#">{{ $jobs->company }}</a></td>
+                    <td>{{ $jobs->num_emp }}</td>
+                    <td>{{ $jobs->summary }}</td>
                 </tr>
-            @endforeach
+
             </tbody>
             <tfoot>
             <tr>
@@ -45,14 +42,10 @@
             </tfoot>
         </table>
     </div>
-    {{--end of content--}}
-    @endsection
+@endsection
 @section('javascript')
     <script src="/style_admin/js/plugins/footable/footable.all.min.js"></script>
     <script>
-        function clickSearch() {
-            var $x = $('#filter').val();
-            $('#btnSearch').attr('href','/result-search/'+$x);
-        }
+
     </script>
-    @endsection
+@endsection

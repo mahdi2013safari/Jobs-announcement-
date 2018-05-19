@@ -61,7 +61,7 @@
                                 <td>{{ $job->email }}</td>
                                 <th><a href="/admin/{{ $job->id }}/edit" class="fa fa-edit">   Edit</a></th>
                                 <th><a href="" data-toggle="modal" data-target="#DeleteModal" onclick="clickDelete({{ $job->id }})" class="fa fa-trash"  style="color: red">   Delete</a></th>
-                                {{--"--}}
+
                             </tr>
                             @endforeach
                             </tbody>

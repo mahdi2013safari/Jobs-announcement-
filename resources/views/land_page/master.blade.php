@@ -9,4 +9,5 @@
 </div>
 
 @include('land_page.widget')
+@include('land_page.catagory_jobs')
 @include('land_page.footer')

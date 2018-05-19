@@ -14,21 +14,14 @@
 use App\Http\Controllers\MahdiController;
 
 Route::get('/', 'LandingPage@index');
-
+Route::get('/result-search/{name}', 'LandingPage@show');
 
 Route::middleware('auth')->group(function(){
-    //Route::resource('/admin/new', MahdiController);
-    /**
-     * this route for testing and debagging of migration
-     */
-    Route::resource('/admin/safari','SafariController');
-
     /**
      * route open the view page of admin/ enter new job .
      */
     Route::resource('/admin','JobAnnounceController');
     Route::get('/admin/{id}/delete','JobAnnounceController@destroy');
-    Route::resource('/car','CarController');
 });
 
 Auth::routes();

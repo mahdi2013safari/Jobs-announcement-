@@ -17,8 +17,10 @@ class CreateJobAnnouncesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('company');
+            $table->string('com_about');
             $table->string('num_emp');
             $table->string('summary');
+            $table->string('education');
             $table->string('date_start');
             $table->string('date_expire');
             $table->string('email');
