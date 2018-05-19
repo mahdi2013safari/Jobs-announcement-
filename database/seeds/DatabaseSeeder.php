@@ -13,7 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+//      create 50 jobs announce in database
         if(job_announce::count() == 0)$this->call('Job');
+        
+//      create just only one user admin
         User::create([
             'name' => 'mahdi',
             'email' => 'mahdi@email.com',
@@ -22,11 +25,16 @@ class DatabaseSeeder extends Seeder
     }
 }
 
-
+/**
+ * Class Job
+ * run method to insert 50 jobs 
+ * faker in database table job_announces
+ */
 class Job extends Seeder
 {
     public function run()
     {
-          factory(App\job_announce::class, 50)->create();
+          factory(App\job_announce::class, 100)->create();
+        factory(\App\Job_category::class,20)-create();
     }
 }

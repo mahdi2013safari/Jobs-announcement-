@@ -10,8 +10,11 @@ $factory->define(App\job_announce::class, function (Faker $faker) {
         'num_emp'=>$faker->numberBetween(1,10),
         'summary'=>$faker->sentence,
         'education'=>$faker->name,
+        'job_category'=>$faker->numberBetween(1,25),
         'date_start'=>$faker->date('Y-m-d','now'),
         'date_expire'=>$faker->date('Y-m-d','now'),
         'email'=>$faker->companyEmail
     ];
 });
+
+
