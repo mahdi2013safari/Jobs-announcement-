@@ -21,11 +21,17 @@ class CreateJobAnnouncesTable extends Migration
             $table->string('num_emp');
             $table->string('summary');
             $table->string('education');
-            $table->string('job_category');
+            $table->string('FK_job_cat')->unsigned();
             $table->string('date_start');
             $table->string('date_expire');
             $table->string('email');
+
+            
+
+
+
             $table->timestamps();
+
         });
     }
 

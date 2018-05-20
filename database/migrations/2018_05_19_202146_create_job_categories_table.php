@@ -16,6 +16,11 @@ class CreateJobCategoriesTable extends Migration
         Schema::create('job_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('field');
+            $table->increments('id_category')->unsigned();
+
+            $table->foreign('id_category')->references('FK_job_cat')
+                ->on('job_announces');
+            
             $table->timestamps();
         });
     }
